@@ -1,0 +1,11 @@
+{
+  "name": "AeonAnalyticsDemo",
+  "references": [
+    "AeonAnalytics.Runtime"
+  ],
+  "includePlatforms": [
+    "Editor", "Android", "iOS", "WebGL", "LinuxStandalone64"
+  ],
+  "allowUnsafeCode": false,
+  "autoReferenced": true
+}

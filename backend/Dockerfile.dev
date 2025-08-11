@@ -1,0 +1,18 @@
+FROM node:18-alpine
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install
+RUN npm install --save-dev nodemon ts-node typescript @types/node
+
+COPY . .
+
+ENV NODE_ENV=development
+ENV PORT=3001
+
+EXPOSE 3001
+
+# Otomatik build ve dist'ten başlatma
+CMD ["sh", "-c", "npm run build && node dist/index.js"] 

@@ -1,0 +1,1180 @@
+Executing (default): SELECT 1+1 AS result
+Executing (default): SELECT 1+1 AS result
+PostgreSQL bağlantısı başarılı.
+Database connection established successfully.
+Executing (default): SELECT table_name FROM information_schema.tables WHERE table_schema = 'public' AND table_name = 'Events'
+Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Events' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.indkey ORDER BY i.relname;
+Executing (default): SELECT table_name FROM information_schema.tables WHERE table_schema = 'public' AND table_name = 'Metrics'
+Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.indisunique AS unique, ix.indkey AS indkey, array_agg(a.attnum) as column_indexes, array_agg(a.attname) AS column_names, pg_get_indexdef(ix.indexrelid) AS definition FROM pg_class t, pg_class i, pg_index ix, pg_attribute a WHERE t.oid = ix.indrelid AND i.oid = ix.indexrelid AND a.attrelid = t.oid AND t.relkind = 'r' and t.relname = 'Metrics' GROUP BY i.relname, ix.indexrelid, ix.indisprimary, ix.indisunique, ix.indkey ORDER BY i.relname;
+Database synced successfully
+Server is running on port 3000
+API URL: http://localhost:3000/api
+Development mode: ENABLED
+2025-03-17T07:38:25.201Z - GET /api/games/key-info
+Headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1"
+}
+Received request headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1"
+}
+Validating API key: 3ffebb...
+Querying database for API key: 3ffebb...
+2025-03-17T07:38:25.218Z - GET /api/games/key-info
+Headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1"
+}
+Received request headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1"
+}
+Validating API key: 3ffebb...
+Querying database for API key: 3ffebb...
+Query result rows: 1
+API key validated for game: aeon1 (AeonGameAnalyticsDemo)
+API key info request approved for game: aeon1
+Query result rows: 1
+API key validated for game: aeon1 (AeonGameAnalyticsDemo)
+API key info request approved for game: aeon1
+2025-03-17T07:38:25.493Z - POST /api/sessions
+Headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "266"
+}
+Request body size: 266 bytes
+Request body: {
+  "session_id": "c0ffe7f9-24bb-4963-9c84-147e941faa6e",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "device_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "game_id": "aeon1",
+  "game_version": "0.1",
+  "start_time": "2025-03-17T07:38:25.1735850Z",
+  "timezone_offset_minutes": 180
+}
+Received request headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "266"
+}
+Validating API key: 3ffebb...
+Querying database for API key: 3ffebb...
+2025-03-17T07:38:25.494Z - POST /api/sessions
+Headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "266"
+}
+Request body size: 266 bytes
+Request body: {
+  "session_id": "c0ffe7f9-24bb-4963-9c84-147e941faa6e",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "device_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "game_id": "aeon1",
+  "game_version": "0.1",
+  "start_time": "2025-03-17T07:38:25.1735850Z",
+  "timezone_offset_minutes": 180
+}
+Received request headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "266"
+}
+Validating API key: 3ffebb...
+Querying database for API key: 3ffebb...
+Query result rows: 1
+API key validated for game: aeon1 (AeonGameAnalyticsDemo)
+Yeni session isteği alındı: {
+  "session_id": "c0ffe7f9-24bb-4963-9c84-147e941faa6e",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "device_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "game_id": "aeon1",
+  "game_version": "0.1",
+  "start_time": "2025-03-17T07:38:25.1735850Z",
+  "timezone_offset_minutes": 180
+}...
+Session oluşturuluyor - Game ID: aeon1, User: 3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2, Session ID: c0ffe7f9-24bb-4963-9c84-147e941faa6e
+Query result rows: 1
+API key validated for game: aeon1 (AeonGameAnalyticsDemo)
+Yeni session isteği alındı: {
+  "session_id": "c0ffe7f9-24bb-4963-9c84-147e941faa6e",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "device_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "game_id": "aeon1",
+  "game_version": "0.1",
+  "start_time": "2025-03-17T07:38:25.1735850Z",
+  "timezone_offset_minutes": 180
+}...
+Session oluşturuluyor - Game ID: aeon1, User: 3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2, Session ID: c0ffe7f9-24bb-4963-9c84-147e941faa6e
+Start time string'den dönüştürüldü: 2025-03-17T07:38:25.1735850Z -> 2025-03-17T07:38:25.173Z
+Session başlangıç zamanı: 2025-03-17T07:38:25.173Z
+Start time string'den dönüştürüldü: 2025-03-17T07:38:25.1735850Z -> 2025-03-17T07:38:25.173Z
+Session başlangıç zamanı: 2025-03-17T07:38:25.173Z
+Session başarıyla oluşturuldu, ID: c0ffe7f9-24bb-4963-9c84-147e941faa6e
+Session ID c0ffe7f9-24bb-4963-9c84-147e941faa6e mükerrer (duplicate). Mevcut session'ı kullanın.
+2025-03-17T07:38:25.525Z - POST /api/events
+Headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "310"
+}
+Request body size: 310 bytes
+Request body: {
+  "event_id": "39572f59-6a3e-4fc5-93ba-1f9fd6a914e7",
+  "session_id": "c0ffe7f9-24bb-4963-9c84-147e941faa6e",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "event_name": "session_start",
+  "event_type": "System",
+  "timestamp": "2025-03-17T07:38:25.5222410Z",
+  "timezone_offset_minutes": 180,
+  "parameters": {},
+  "game_id": "aeon1"
+}
+Received request headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "310"
+}
+Validating API key: 3ffebb...
+Querying database for API key: 3ffebb...
+Query result rows: 1
+API key validated for game: aeon1 (AeonGameAnalyticsDemo)
+Event verileri alındı: {
+  "event_id": "39572f59-6a3e-4fc5-93ba-1f9fd6a914e7",
+  "session_id": "c0ffe7f9-24bb-4963-9c84-147e941faa6e",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "event_name": "session_start",
+  ...
+Event kaydediliyor - Game ID: aeon1, Event: session_start, User: 3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2
+Event zaman bilgisi: 2025-03-17T04:38:25.522Z
+2025-03-17T07:38:25.536Z - POST /api/events
+Headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "310"
+}
+Request body size: 310 bytes
+Request body: {
+  "event_id": "3a777c60-8d25-4696-a93e-46a39e363efe",
+  "session_id": "c0ffe7f9-24bb-4963-9c84-147e941faa6e",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "event_name": "session_start",
+  "event_type": "System",
+  "timestamp": "2025-03-17T07:38:25.5274070Z",
+  "timezone_offset_minutes": 180,
+  "parameters": {},
+  "game_id": "aeon1"
+}
+Received request headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "310"
+}
+Validating API key: 3ffebb...
+Querying database for API key: 3ffebb...
+Query result rows: 1
+API key validated for game: aeon1 (AeonGameAnalyticsDemo)
+Event verileri alındı: {
+  "event_id": "3a777c60-8d25-4696-a93e-46a39e363efe",
+  "session_id": "c0ffe7f9-24bb-4963-9c84-147e941faa6e",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "event_name": "session_start",
+  ...
+Event kaydediliyor - Game ID: aeon1, Event: session_start, User: 3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2
+Event başarıyla kaydedildi, ID: 39572f59-6a3e-4fc5-93ba-1f9fd6a914e7
+Event zaman bilgisi: 2025-03-17T04:38:25.527Z
+Event başarıyla kaydedildi, ID: 3a777c60-8d25-4696-a93e-46a39e363efe
+2025-03-17T07:38:30.403Z - POST /api/sessions/end
+Headers: {
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "content-length": "190",
+  "expect": "100-continue",
+  "connection": "keep-alive",
+  "host": "localhost:3000"
+}
+Request body size: 190 bytes
+Request body: {
+  "session_id": "c0ffe7f9-24bb-4963-9c84-147e941faa6e",
+  "end_time": "2025-03-17T07:38:30.3662850Z",
+  "duration_seconds": "5.19",
+  "timezone_offset_minutes": 180,
+  "add_end_event": true,
+  "game_id": "aeon1"
+}
+Received request headers: {
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "content-length": "190",
+  "expect": "100-continue",
+  "connection": "keep-alive",
+  "host": "localhost:3000"
+}
+Validating API key: 3ffebb...
+Querying database for API key: 3ffebb...
+Query result rows: 1
+API key validated for game: aeon1 (AeonGameAnalyticsDemo)
+Session sonu isteği alındı: {
+  "session_id": "c0ffe7f9-24bb-4963-9c84-147e941faa6e",
+  "end_time": "2025-03-17T07:38:30.3662850Z",
+  "duration_seconds": "5.19",
+  "timezone_offset_minutes": 180,
+  "add_end_event": true,
+  "game_id": "aeon1"
+}...
+[DEBUG] Session sonlandırma isteği detayları:
+[DEBUG] session_id: c0ffe7f9-24bb-4963-9c84-147e941faa6e
+[DEBUG] end_time: 2025-03-17T07:38:30.3662850Z
+[DEBUG] duration_seconds (raw): 5.19, type: string
+Session sonlandırma isteği işleniyor. Session ID: c0ffe7f9-24bb-4963-9c84-147e941faa6e, Game ID: aeon1
+Session bulundu - User ID: 3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2, Game ID: aeon1
+Session end_time parsing: 2025-03-17T07:38:30.3662850Z => 2025-03-17T07:38:30.366Z
+Duration işlendi: 5.19 saniye
+Session sonu bilgileri: {
+  session_id: 'c0ffe7f9-24bb-4963-9c84-147e941faa6e',
+  end_time: '2025-03-17T07:38:30.366Z',
+  converted: '2025-03-17T04:38:30.366Z',
+  duration: 5.19,
+  add_end_event: true
+}
+Session sonlandırma sorgusu çalıştırılıyor...
+  - Session ID: c0ffe7f9-24bb-4963-9c84-147e941faa6e
+  - End Time: 2025-03-17T04:38:30.366Z
+  - Duration: 5.19 (string olarak)
+Session başarıyla sonlandırıldı, ID: c0ffe7f9-24bb-4963-9c84-147e941faa6e
+Session end event oluşturuluyor: {"event_id":"155312f2-450d-44d2-b844-5eac6e51b244","session_id":"c0ffe7f9-24bb-4963-9c84-147e941faa6e","user_id":"3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2","event_name":"session_end","event_type":"System","timestamp":"2025-03-17T04:38:30.366Z","parameters":{"session_duration":5.19},"game_id":"aeon1"}
+Session end event başarıyla kaydedildi, ID: 155312f2-450d-44d2-b844-5eac6e51b244
+Kullanıcı istatistik güncelleme hatası (önemli değil): invalid input syntax for type integer: "5.19"
+2025-03-17T07:38:50.314Z - GET /api/games/key-info
+Headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1"
+}
+Received request headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1"
+}
+Validating API key: 3ffebb...
+Querying database for API key: 3ffebb...
+2025-03-17T07:38:50.329Z - GET /api/games/key-info
+Headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1"
+}
+Received request headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1"
+}
+Validating API key: 3ffebb...
+Querying database for API key: 3ffebb...
+Query result rows: 1
+API key validated for game: aeon1 (AeonGameAnalyticsDemo)
+API key info request approved for game: aeon1
+Query result rows: 1
+API key validated for game: aeon1 (AeonGameAnalyticsDemo)
+API key info request approved for game: aeon1
+2025-03-17T07:38:50.666Z - POST /api/sessions
+Headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "266"
+}
+Request body size: 266 bytes
+Request body: {
+  "session_id": "504f5a8e-fefd-40bc-acb2-1e2564a352ac",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "device_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "game_id": "aeon1",
+  "game_version": "0.1",
+  "start_time": "2025-03-17T07:38:50.3121840Z",
+  "timezone_offset_minutes": 180
+}
+Received request headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "266"
+}
+Validating API key: 3ffebb...
+Querying database for API key: 3ffebb...
+Query result rows: 1
+API key validated for game: aeon1 (AeonGameAnalyticsDemo)
+Yeni session isteği alındı: {
+  "session_id": "504f5a8e-fefd-40bc-acb2-1e2564a352ac",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "device_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "game_id": "aeon1",
+  "game_version": "0.1",
+  "start_time": "2025-03-17T07:38:50.3121840Z",
+  "timezone_offset_minutes": 180
+}...
+Session oluşturuluyor - Game ID: aeon1, User: 3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2, Session ID: 504f5a8e-fefd-40bc-acb2-1e2564a352ac
+2025-03-17T07:38:50.676Z - POST /api/sessions
+Headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "266"
+}
+Request body size: 266 bytes
+Request body: {
+  "session_id": "504f5a8e-fefd-40bc-acb2-1e2564a352ac",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "device_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "game_id": "aeon1",
+  "game_version": "0.1",
+  "start_time": "2025-03-17T07:38:50.3121840Z",
+  "timezone_offset_minutes": 180
+}
+Received request headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "266"
+}
+Validating API key: 3ffebb...
+Querying database for API key: 3ffebb...
+Query result rows: 1
+API key validated for game: aeon1 (AeonGameAnalyticsDemo)
+Yeni session isteği alındı: {
+  "session_id": "504f5a8e-fefd-40bc-acb2-1e2564a352ac",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "device_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "game_id": "aeon1",
+  "game_version": "0.1",
+  "start_time": "2025-03-17T07:38:50.3121840Z",
+  "timezone_offset_minutes": 180
+}...
+Session oluşturuluyor - Game ID: aeon1, User: 3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2, Session ID: 504f5a8e-fefd-40bc-acb2-1e2564a352ac
+Start time string'den dönüştürüldü: 2025-03-17T07:38:50.3121840Z -> 2025-03-17T07:38:50.312Z
+Session başlangıç zamanı: 2025-03-17T07:38:50.312Z
+Session başarıyla oluşturuldu, ID: 504f5a8e-fefd-40bc-acb2-1e2564a352ac
+Session ID 504f5a8e-fefd-40bc-acb2-1e2564a352ac zaten mevcut, yeni bir kayıt oluşturulmayacak
+2025-03-17T07:38:50.686Z - POST /api/events
+Headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "310"
+}
+Request body size: 310 bytes
+Request body: {
+  "event_id": "8c48b2ef-bdd9-42f1-9e7d-34b2408381a9",
+  "session_id": "504f5a8e-fefd-40bc-acb2-1e2564a352ac",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "event_name": "session_start",
+  "event_type": "System",
+  "timestamp": "2025-03-17T07:38:50.6861730Z",
+  "timezone_offset_minutes": 180,
+  "parameters": {},
+  "game_id": "aeon1"
+}
+Received request headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "310"
+}
+Validating API key: 3ffebb...
+Querying database for API key: 3ffebb...
+Query result rows: 1
+API key validated for game: aeon1 (AeonGameAnalyticsDemo)
+Event verileri alındı: {
+  "event_id": "8c48b2ef-bdd9-42f1-9e7d-34b2408381a9",
+  "session_id": "504f5a8e-fefd-40bc-acb2-1e2564a352ac",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "event_name": "session_start",
+  ...
+Event kaydediliyor - Game ID: aeon1, Event: session_start, User: 3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2
+Event zaman bilgisi: 2025-03-17T04:38:50.686Z
+2025-03-17T07:38:50.698Z - POST /api/events
+Headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "310"
+}
+Request body size: 310 bytes
+Request body: {
+  "event_id": "44c9ebb8-5c82-46a0-ac51-afaf955dda5a",
+  "session_id": "504f5a8e-fefd-40bc-acb2-1e2564a352ac",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "event_name": "session_start",
+  "event_type": "System",
+  "timestamp": "2025-03-17T07:38:50.6869740Z",
+  "timezone_offset_minutes": 180,
+  "parameters": {},
+  "game_id": "aeon1"
+}
+Received request headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "310"
+}
+Validating API key: 3ffebb...
+Querying database for API key: 3ffebb...
+Query result rows: 1
+API key validated for game: aeon1 (AeonGameAnalyticsDemo)
+Event verileri alındı: {
+  "event_id": "44c9ebb8-5c82-46a0-ac51-afaf955dda5a",
+  "session_id": "504f5a8e-fefd-40bc-acb2-1e2564a352ac",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "event_name": "session_start",
+  ...
+Event kaydediliyor - Game ID: aeon1, Event: session_start, User: 3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2
+Event başarıyla kaydedildi, ID: 8c48b2ef-bdd9-42f1-9e7d-34b2408381a9
+Event zaman bilgisi: 2025-03-17T04:38:50.686Z
+Event başarıyla kaydedildi, ID: 44c9ebb8-5c82-46a0-ac51-afaf955dda5a
+2025-03-17T07:38:55.891Z - POST /api/sessions/end
+Headers: {
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "content-length": "190",
+  "expect": "100-continue",
+  "connection": "keep-alive",
+  "host": "localhost:3000"
+}
+Request body size: 190 bytes
+Request body: {
+  "session_id": "504f5a8e-fefd-40bc-acb2-1e2564a352ac",
+  "end_time": "2025-03-17T07:38:55.8178400Z",
+  "duration_seconds": "5.51",
+  "timezone_offset_minutes": 180,
+  "add_end_event": true,
+  "game_id": "aeon1"
+}
+Received request headers: {
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "content-length": "190",
+  "expect": "100-continue",
+  "connection": "keep-alive",
+  "host": "localhost:3000"
+}
+Validating API key: 3ffebb...
+Querying database for API key: 3ffebb...
+Query result rows: 1
+API key validated for game: aeon1 (AeonGameAnalyticsDemo)
+Session sonu isteği alındı: {
+  "session_id": "504f5a8e-fefd-40bc-acb2-1e2564a352ac",
+  "end_time": "2025-03-17T07:38:55.8178400Z",
+  "duration_seconds": "5.51",
+  "timezone_offset_minutes": 180,
+  "add_end_event": true,
+  "game_id": "aeon1"
+}...
+[DEBUG] Session sonlandırma isteği detayları:
+[DEBUG] session_id: 504f5a8e-fefd-40bc-acb2-1e2564a352ac
+[DEBUG] end_time: 2025-03-17T07:38:55.8178400Z
+[DEBUG] duration_seconds (raw): 5.51, type: string
+Session sonlandırma isteği işleniyor. Session ID: 504f5a8e-fefd-40bc-acb2-1e2564a352ac, Game ID: aeon1
+Session bulundu - User ID: 3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2, Game ID: aeon1
+Session end_time parsing: 2025-03-17T07:38:55.8178400Z => 2025-03-17T07:38:55.817Z
+Duration işlendi: 5.51 saniye
+Session sonu bilgileri: {
+  session_id: '504f5a8e-fefd-40bc-acb2-1e2564a352ac',
+  end_time: '2025-03-17T07:38:55.817Z',
+  converted: '2025-03-17T04:38:55.817Z',
+  duration: 5.51,
+  add_end_event: true
+}
+Session sonlandırma sorgusu çalıştırılıyor...
+  - Session ID: 504f5a8e-fefd-40bc-acb2-1e2564a352ac
+  - End Time: 2025-03-17T04:38:55.817Z
+  - Duration: 5.51 (string olarak)
+Session başarıyla sonlandırıldı, ID: 504f5a8e-fefd-40bc-acb2-1e2564a352ac
+Session end event oluşturuluyor: {"event_id":"5d7389f5-7d86-4253-bc72-4ec2696312a4","session_id":"504f5a8e-fefd-40bc-acb2-1e2564a352ac","user_id":"3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2","event_name":"session_end","event_type":"System","timestamp":"2025-03-17T04:38:55.817Z","parameters":{"session_duration":5.51},"game_id":"aeon1"}
+Session end event başarıyla kaydedildi, ID: 5d7389f5-7d86-4253-bc72-4ec2696312a4
+Kullanıcı istatistik güncelleme hatası (önemli değil): invalid input syntax for type integer: "5.51"
+2025-03-17T07:39:18.835Z - GET /api/games/key-info
+Headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1"
+}
+Received request headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1"
+}
+Validating API key: 3ffebb...
+Querying database for API key: 3ffebb...
+2025-03-17T07:39:18.840Z - GET /api/games/key-info
+Headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1"
+}
+Received request headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1"
+}
+Validating API key: 3ffebb...
+Querying database for API key: 3ffebb...
+Query result rows: 1
+API key validated for game: aeon1 (AeonGameAnalyticsDemo)
+API key info request approved for game: aeon1
+Query result rows: 1
+API key validated for game: aeon1 (AeonGameAnalyticsDemo)
+API key info request approved for game: aeon1
+2025-03-17T07:39:19.130Z - POST /api/sessions
+Headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "266"
+}
+Request body size: 266 bytes
+Request body: {
+  "session_id": "f4f99391-45c8-4d22-a423-abf98abd9616",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "device_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "game_id": "aeon1",
+  "game_version": "0.1",
+  "start_time": "2025-03-17T07:39:18.8290870Z",
+  "timezone_offset_minutes": 180
+}
+Received request headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "266"
+}
+Validating API key: 3ffebb...
+Querying database for API key: 3ffebb...
+Query result rows: 1
+API key validated for game: aeon1 (AeonGameAnalyticsDemo)
+Yeni session isteği alındı: {
+  "session_id": "f4f99391-45c8-4d22-a423-abf98abd9616",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "device_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "game_id": "aeon1",
+  "game_version": "0.1",
+  "start_time": "2025-03-17T07:39:18.8290870Z",
+  "timezone_offset_minutes": 180
+}...
+Session oluşturuluyor - Game ID: aeon1, User: 3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2, Session ID: f4f99391-45c8-4d22-a423-abf98abd9616
+2025-03-17T07:39:19.141Z - POST /api/sessions
+Headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "266"
+}
+Request body size: 266 bytes
+Request body: {
+  "session_id": "f4f99391-45c8-4d22-a423-abf98abd9616",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "device_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "game_id": "aeon1",
+  "game_version": "0.1",
+  "start_time": "2025-03-17T07:39:18.8290870Z",
+  "timezone_offset_minutes": 180
+}
+Received request headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "266"
+}
+Validating API key: 3ffebb...
+Querying database for API key: 3ffebb...
+Query result rows: 1
+API key validated for game: aeon1 (AeonGameAnalyticsDemo)
+Yeni session isteği alındı: {
+  "session_id": "f4f99391-45c8-4d22-a423-abf98abd9616",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "device_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "game_id": "aeon1",
+  "game_version": "0.1",
+  "start_time": "2025-03-17T07:39:18.8290870Z",
+  "timezone_offset_minutes": 180
+}...
+Session oluşturuluyor - Game ID: aeon1, User: 3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2, Session ID: f4f99391-45c8-4d22-a423-abf98abd9616
+Start time string'den dönüştürüldü: 2025-03-17T07:39:18.8290870Z -> 2025-03-17T07:39:18.829Z
+Session başlangıç zamanı: 2025-03-17T07:39:18.829Z
+Session başarıyla oluşturuldu, ID: f4f99391-45c8-4d22-a423-abf98abd9616
+Session ID f4f99391-45c8-4d22-a423-abf98abd9616 zaten mevcut, yeni bir kayıt oluşturulmayacak
+2025-03-17T07:39:19.165Z - POST /api/events
+Headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "310"
+}
+Request body size: 310 bytes
+Request body: {
+  "event_id": "94c81fea-607d-4589-9326-94f296d500c7",
+  "session_id": "f4f99391-45c8-4d22-a423-abf98abd9616",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "event_name": "session_start",
+  "event_type": "System",
+  "timestamp": "2025-03-17T07:39:19.1626340Z",
+  "timezone_offset_minutes": 180,
+  "parameters": {},
+  "game_id": "aeon1"
+}
+Received request headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "310"
+}
+Validating API key: 3ffebb...
+Querying database for API key: 3ffebb...
+Query result rows: 1
+API key validated for game: aeon1 (AeonGameAnalyticsDemo)
+Event verileri alındı: {
+  "event_id": "94c81fea-607d-4589-9326-94f296d500c7",
+  "session_id": "f4f99391-45c8-4d22-a423-abf98abd9616",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "event_name": "session_start",
+  ...
+Event kaydediliyor - Game ID: aeon1, Event: session_start, User: 3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2
+Event zaman bilgisi: 2025-03-17T04:39:19.162Z
+Event başarıyla kaydedildi, ID: 94c81fea-607d-4589-9326-94f296d500c7
+2025-03-17T07:39:19.176Z - POST /api/events
+Headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "310"
+}
+Request body size: 310 bytes
+Request body: {
+  "event_id": "85160d5b-a623-487a-a3d3-e011b0d82582",
+  "session_id": "f4f99391-45c8-4d22-a423-abf98abd9616",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "event_name": "session_start",
+  "event_type": "System",
+  "timestamp": "2025-03-17T07:39:19.1655830Z",
+  "timezone_offset_minutes": 180,
+  "parameters": {},
+  "game_id": "aeon1"
+}
+Received request headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "310"
+}
+Validating API key: 3ffebb...
+Querying database for API key: 3ffebb...
+Query result rows: 1
+API key validated for game: aeon1 (AeonGameAnalyticsDemo)
+Event verileri alındı: {
+  "event_id": "85160d5b-a623-487a-a3d3-e011b0d82582",
+  "session_id": "f4f99391-45c8-4d22-a423-abf98abd9616",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "event_name": "session_start",
+  ...
+Event kaydediliyor - Game ID: aeon1, Event: session_start, User: 3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2
+Event zaman bilgisi: 2025-03-17T04:39:19.165Z
+Event başarıyla kaydedildi, ID: 85160d5b-a623-487a-a3d3-e011b0d82582
+2025-03-17T07:39:21.465Z - POST /api/sessions/end
+Headers: {
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "content-length": "190",
+  "expect": "100-continue",
+  "connection": "keep-alive",
+  "host": "localhost:3000"
+}
+Request body size: 190 bytes
+Request body: {
+  "session_id": "f4f99391-45c8-4d22-a423-abf98abd9616",
+  "end_time": "2025-03-17T07:39:21.4335440Z",
+  "duration_seconds": "2.60",
+  "timezone_offset_minutes": 180,
+  "add_end_event": true,
+  "game_id": "aeon1"
+}
+Received request headers: {
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "content-length": "190",
+  "expect": "100-continue",
+  "connection": "keep-alive",
+  "host": "localhost:3000"
+}
+Validating API key: 3ffebb...
+Querying database for API key: 3ffebb...
+Query result rows: 1
+API key validated for game: aeon1 (AeonGameAnalyticsDemo)
+Session sonu isteği alındı: {
+  "session_id": "f4f99391-45c8-4d22-a423-abf98abd9616",
+  "end_time": "2025-03-17T07:39:21.4335440Z",
+  "duration_seconds": "2.60",
+  "timezone_offset_minutes": 180,
+  "add_end_event": true,
+  "game_id": "aeon1"
+}...
+[DEBUG] Session sonlandırma isteği detayları:
+[DEBUG] session_id: f4f99391-45c8-4d22-a423-abf98abd9616
+[DEBUG] end_time: 2025-03-17T07:39:21.4335440Z
+[DEBUG] duration_seconds (raw): 2.60, type: string
+Session sonlandırma isteği işleniyor. Session ID: f4f99391-45c8-4d22-a423-abf98abd9616, Game ID: aeon1
+Session bulundu - User ID: 3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2, Game ID: aeon1
+Session end_time parsing: 2025-03-17T07:39:21.4335440Z => 2025-03-17T07:39:21.433Z
+Duration işlendi: 2.6 saniye
+Session sonu bilgileri: {
+  session_id: 'f4f99391-45c8-4d22-a423-abf98abd9616',
+  end_time: '2025-03-17T07:39:21.433Z',
+  converted: '2025-03-17T04:39:21.433Z',
+  duration: 2.6,
+  add_end_event: true
+}
+Session sonlandırma sorgusu çalıştırılıyor...
+  - Session ID: f4f99391-45c8-4d22-a423-abf98abd9616
+  - End Time: 2025-03-17T04:39:21.433Z
+  - Duration: 2.6 (string olarak)
+Session başarıyla sonlandırıldı, ID: f4f99391-45c8-4d22-a423-abf98abd9616
+Session end event oluşturuluyor: {"event_id":"fa511e21-979c-4928-bd06-6b6ed7d52878","session_id":"f4f99391-45c8-4d22-a423-abf98abd9616","user_id":"3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2","event_name":"session_end","event_type":"System","timestamp":"2025-03-17T04:39:21.433Z","parameters":{"session_duration":2.6},"game_id":"aeon1"}
+Session end event başarıyla kaydedildi, ID: fa511e21-979c-4928-bd06-6b6ed7d52878
+Kullanıcı istatistik güncelleme hatası (önemli değil): invalid input syntax for type integer: "2.6"
+2025-03-17T07:39:51.303Z - GET /api/games/key-info
+Headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1"
+}
+Received request headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1"
+}
+Validating API key: 3ffebb...
+Querying database for API key: 3ffebb...
+2025-03-17T07:39:51.311Z - GET /api/games/key-info
+Headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1"
+}
+Received request headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1"
+}
+Validating API key: 3ffebb...
+Querying database for API key: 3ffebb...
+Query result rows: 1
+API key validated for game: aeon1 (AeonGameAnalyticsDemo)
+API key info request approved for game: aeon1
+Query result rows: 1
+API key validated for game: aeon1 (AeonGameAnalyticsDemo)
+API key info request approved for game: aeon1
+2025-03-17T07:39:51.597Z - POST /api/sessions
+Headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "266"
+}
+Request body size: 266 bytes
+Request body: {
+  "session_id": "fffb7117-bca7-48ef-a09f-6547abeafdd4",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "device_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "game_id": "aeon1",
+  "game_version": "0.1",
+  "start_time": "2025-03-17T07:39:51.2997390Z",
+  "timezone_offset_minutes": 180
+}
+Received request headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "266"
+}
+Validating API key: 3ffebb...
+Querying database for API key: 3ffebb...
+2025-03-17T07:39:51.608Z - POST /api/sessions
+Headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "266"
+}
+Request body size: 266 bytes
+Request body: {
+  "session_id": "fffb7117-bca7-48ef-a09f-6547abeafdd4",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "device_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "game_id": "aeon1",
+  "game_version": "0.1",
+  "start_time": "2025-03-17T07:39:51.2997390Z",
+  "timezone_offset_minutes": 180
+}
+Received request headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "266"
+}
+Validating API key: 3ffebb...
+Querying database for API key: 3ffebb...
+Query result rows: 1
+API key validated for game: aeon1 (AeonGameAnalyticsDemo)
+Yeni session isteği alındı: {
+  "session_id": "fffb7117-bca7-48ef-a09f-6547abeafdd4",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "device_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "game_id": "aeon1",
+  "game_version": "0.1",
+  "start_time": "2025-03-17T07:39:51.2997390Z",
+  "timezone_offset_minutes": 180
+}...
+Session oluşturuluyor - Game ID: aeon1, User: 3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2, Session ID: fffb7117-bca7-48ef-a09f-6547abeafdd4
+Query result rows: 1
+API key validated for game: aeon1 (AeonGameAnalyticsDemo)
+Yeni session isteği alındı: {
+  "session_id": "fffb7117-bca7-48ef-a09f-6547abeafdd4",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "device_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "game_id": "aeon1",
+  "game_version": "0.1",
+  "start_time": "2025-03-17T07:39:51.2997390Z",
+  "timezone_offset_minutes": 180
+}...
+Session oluşturuluyor - Game ID: aeon1, User: 3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2, Session ID: fffb7117-bca7-48ef-a09f-6547abeafdd4
+Start time string'den dönüştürüldü: 2025-03-17T07:39:51.2997390Z -> 2025-03-17T07:39:51.299Z
+Session başlangıç zamanı: 2025-03-17T07:39:51.299Z
+Start time string'den dönüştürüldü: 2025-03-17T07:39:51.2997390Z -> 2025-03-17T07:39:51.299Z
+Session başlangıç zamanı: 2025-03-17T07:39:51.299Z
+Session başarıyla oluşturuldu, ID: fffb7117-bca7-48ef-a09f-6547abeafdd4
+Session ID fffb7117-bca7-48ef-a09f-6547abeafdd4 mükerrer (duplicate). Mevcut session'ı kullanın.
+2025-03-17T07:39:51.666Z - POST /api/events
+Headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "310"
+}
+Request body size: 310 bytes
+Request body: {
+  "event_id": "aad9e919-36d2-46da-89b8-320771a69516",
+  "session_id": "fffb7117-bca7-48ef-a09f-6547abeafdd4",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "event_name": "session_start",
+  "event_type": "System",
+  "timestamp": "2025-03-17T07:39:51.6652680Z",
+  "timezone_offset_minutes": 180,
+  "parameters": {},
+  "game_id": "aeon1"
+}
+Received request headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "310"
+}
+Validating API key: 3ffebb...
+Querying database for API key: 3ffebb...
+Query result rows: 1
+API key validated for game: aeon1 (AeonGameAnalyticsDemo)
+Event verileri alındı: {
+  "event_id": "aad9e919-36d2-46da-89b8-320771a69516",
+  "session_id": "fffb7117-bca7-48ef-a09f-6547abeafdd4",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "event_name": "session_start",
+  ...
+Event kaydediliyor - Game ID: aeon1, Event: session_start, User: 3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2
+Event zaman bilgisi: 2025-03-17T04:39:51.665Z
+2025-03-17T07:39:51.677Z - POST /api/events
+Headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "310"
+}
+Request body size: 310 bytes
+Request body: {
+  "event_id": "98743707-d8d3-49e2-a0a4-17970c1b603e",
+  "session_id": "fffb7117-bca7-48ef-a09f-6547abeafdd4",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "event_name": "session_start",
+  "event_type": "System",
+  "timestamp": "2025-03-17T07:39:51.6676480Z",
+  "timezone_offset_minutes": 180,
+  "parameters": {},
+  "game_id": "aeon1"
+}
+Received request headers: {
+  "host": "localhost:3000",
+  "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
+  "accept": "*/*",
+  "accept-encoding": "deflate, gzip",
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "x-unity-version": "2022.3.51f1",
+  "content-length": "310"
+}
+Validating API key: 3ffebb...
+Querying database for API key: 3ffebb...
+Query result rows: 1
+API key validated for game: aeon1 (AeonGameAnalyticsDemo)
+Event verileri alındı: {
+  "event_id": "98743707-d8d3-49e2-a0a4-17970c1b603e",
+  "session_id": "fffb7117-bca7-48ef-a09f-6547abeafdd4",
+  "user_id": "3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2",
+  "event_name": "session_start",
+  ...
+Event kaydediliyor - Game ID: aeon1, Event: session_start, User: 3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2
+Event başarıyla kaydedildi, ID: aad9e919-36d2-46da-89b8-320771a69516
+Event zaman bilgisi: 2025-03-17T04:39:51.667Z
+Event başarıyla kaydedildi, ID: 98743707-d8d3-49e2-a0a4-17970c1b603e
+2025-03-17T07:39:53.533Z - POST /api/sessions/end
+Headers: {
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "content-length": "190",
+  "expect": "100-continue",
+  "connection": "keep-alive",
+  "host": "localhost:3000"
+}
+Request body size: 190 bytes
+Request body: {
+  "session_id": "fffb7117-bca7-48ef-a09f-6547abeafdd4",
+  "end_time": "2025-03-17T07:39:53.4999660Z",
+  "duration_seconds": "2.20",
+  "timezone_offset_minutes": 180,
+  "add_end_event": true,
+  "game_id": "aeon1"
+}
+Received request headers: {
+  "content-type": "application/json",
+  "x-api-key": "3ffebb7b1a9b3ac77ad0a293bf4592c7f7ea1dffb4a8225acad377bbf4f09600",
+  "content-length": "190",
+  "expect": "100-continue",
+  "connection": "keep-alive",
+  "host": "localhost:3000"
+}
+Validating API key: 3ffebb...
+Querying database for API key: 3ffebb...
+Query result rows: 1
+API key validated for game: aeon1 (AeonGameAnalyticsDemo)
+Session sonu isteği alındı: {
+  "session_id": "fffb7117-bca7-48ef-a09f-6547abeafdd4",
+  "end_time": "2025-03-17T07:39:53.4999660Z",
+  "duration_seconds": "2.20",
+  "timezone_offset_minutes": 180,
+  "add_end_event": true,
+  "game_id": "aeon1"
+}...
+[DEBUG] Session sonlandırma isteği detayları:
+[DEBUG] session_id: fffb7117-bca7-48ef-a09f-6547abeafdd4
+[DEBUG] end_time: 2025-03-17T07:39:53.4999660Z
+[DEBUG] duration_seconds (raw): 2.20, type: string
+Session sonlandırma isteği işleniyor. Session ID: fffb7117-bca7-48ef-a09f-6547abeafdd4, Game ID: aeon1
+Session bulundu - User ID: 3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2, Game ID: aeon1
+Session end_time parsing: 2025-03-17T07:39:53.4999660Z => 2025-03-17T07:39:53.499Z
+Duration işlendi: 2.2 saniye
+Session sonu bilgileri: {
+  session_id: 'fffb7117-bca7-48ef-a09f-6547abeafdd4',
+  end_time: '2025-03-17T07:39:53.499Z',
+  converted: '2025-03-17T04:39:53.499Z',
+  duration: 2.2,
+  add_end_event: true
+}
+Session sonlandırma sorgusu çalıştırılıyor...
+  - Session ID: fffb7117-bca7-48ef-a09f-6547abeafdd4
+  - End Time: 2025-03-17T04:39:53.499Z
+  - Duration: 2.2 (string olarak)
+Session başarıyla sonlandırıldı, ID: fffb7117-bca7-48ef-a09f-6547abeafdd4
+Session end event oluşturuluyor: {"event_id":"414b0922-86d2-4c87-baef-f1724056027c","session_id":"fffb7117-bca7-48ef-a09f-6547abeafdd4","user_id":"3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2","event_name":"session_end","event_type":"System","timestamp":"2025-03-17T04:39:53.499Z","parameters":{"session_duration":2.2},"game_id":"aeon1"}
+Session end event başarıyla kaydedildi, ID: 414b0922-86d2-4c87-baef-f1724056027c
+Kullanıcı istatistik güncelleme hatası (önemli değil): invalid input syntax for type integer: "2.2"

@@ -1,0 +1,138 @@
+#1 [aeonanalytic-frontend internal] load build definition from Dockerfile
+#1 transferring dockerfile: 66B
+#1 transferring dockerfile: 68B 0.0s done
+#1 DONE 0.0s
+
+#2 [aeonanalytic-backend internal] load build definition from Dockerfile
+#2 transferring dockerfile: 69B 0.0s done
+#2 DONE 0.0s
+
+#3 [aeonanalytic-frontend internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [aeonanalytic-backend internal] load .dockerignore
+#4 transferring context: 71B done
+#4 DONE 0.0s
+
+#5 [aeonanalytic-backend internal] load metadata for docker.io/library/node:18-alpine
+#5 DONE 2.4s
+
+#6 [aeonanalytic-backend 1/5] FROM docker.io/library/node:18-alpine@sha256:8d6421d663b4c28fd3ebc498332f249011d118945588d0a35cb9bc4b8ca09d9e
+#6 DONE 0.0s
+
+#7 [aeonanalytic-frontend 2/5] WORKDIR /app
+#7 CACHED
+
+#8 [aeonanalytic-backend internal] load build context
+#8 transferring context: 5.97kB 0.0s done
+#8 DONE 0.0s
+
+#9 [aeonanalytic-backend 3/8] COPY package*.json ./
+#9 DONE 0.1s
+
+#10 [aeonanalytic-frontend internal] load build context
+#10 transferring context: 4.42MB 5.0s
+#10 transferring context: 9.53MB 10.1s
+#10 ...
+
+#11 [aeonanalytic-backend 4/8] RUN npm install
+#0 7.049 npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+#0 7.506 npm warn deprecated npmlog@5.0.1: This package is no longer supported.
+#0 8.505 npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+#0 8.765 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+#0 9.671 npm warn deprecated gauge@3.0.2: This package is no longer supported.
+#11 10.16 npm warn deprecated are-we-there-yet@2.0.0: This package is no longer supported.
+#11 ...
+
+#10 [aeonanalytic-frontend internal] load build context
+#10 transferring context: 9.93MB 10.6s done
+#10 DONE 10.7s
+
+#12 [aeonanalytic-frontend 3/5] COPY package*.json ./
+#12 DONE 0.8s
+
+#13 [aeonanalytic-frontend 4/5] RUN npm install
+#13 8.418 npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+#13 ...
+
+#11 [aeonanalytic-backend 4/8] RUN npm install
+#11 21.80 
+#11 21.80 added 550 packages, and audited 551 packages in 21s
+#11 21.80 
+#11 21.80 64 packages are looking for funding
+#11 21.80   run `npm fund` for details
+#11 21.82 
+#11 21.82 3 high severity vulnerabilities
+#11 21.82 
+#11 21.82 To address all issues (including breaking changes), run:
+#11 21.82   npm audit fix --force
+#11 21.82 
+#11 21.82 Run `npm audit` for details.
+#11 21.83 npm notice
+#11 21.83 npm notice New major version of npm available! 10.8.2 -> 11.3.0
+#11 21.83 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.3.0
+#11 21.83 npm notice To update run: npm install -g npm@11.3.0
+#11 21.83 npm notice
+#11 DONE 23.0s
+
+#14 [aeonanalytic-backend 5/8] COPY . .
+#14 DONE 0.1s
+
+#15 [aeonanalytic-backend 6/8] COPY wait-for-it.sh /wait-for-it.sh
+#15 DONE 0.1s
+
+#16 [aeonanalytic-backend 7/8] RUN chmod +x /wait-for-it.sh
+#16 DONE 0.7s
+
+#13 [aeonanalytic-frontend 4/5] RUN npm install
+#13 10.70 npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+#13 15.25 npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+#13 15.31 npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+#13 16.39 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+#13 ...
+
+#17 [aeonanalytic-backend 8/8] RUN npm run build
+#0 0.848 
+#0 0.848 > aeon-analytic-backend@1.0.0 build
+#0 0.848 > tsc
+#0 0.848 
+#17 DONE 10.5s
+
+#18 [aeonanalytic-backend] exporting to image
+#18 exporting layers
+#18 exporting layers 3.7s done
+#18 writing image sha256:09e2a5c72f0107e788698ed115905cad0d84b5d858c934992b42525e49e28493 done
+#18 naming to docker.io/library/aeonanalytic-backend done
+#18 DONE 3.8s
+
+#13 [aeonanalytic-frontend 4/5] RUN npm install
+#13 24.66 npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+#13 57.35 
+#13 57.35 added 592 packages, and audited 593 packages in 57s
+#13 57.35 
+#13 57.35 169 packages are looking for funding
+#13 57.35   run `npm fund` for details
+#13 57.43 
+#13 57.43 1 critical severity vulnerability
+#13 57.43 
+#13 57.43 To address all issues, run:
+#13 57.43   npm audit fix
+#13 57.43 
+#13 57.43 Run `npm audit` for details.
+#13 57.43 npm notice
+#13 57.43 npm notice New major version of npm available! 10.8.2 -> 11.3.0
+#13 57.43 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.3.0
+#13 57.43 npm notice To update run: npm install -g npm@11.3.0
+#13 57.43 npm notice
+#13 DONE 59.0s
+
+#19 [aeonanalytic-frontend 5/5] COPY . .
+#19 DONE 15.0s
+
+#18 [aeonanalytic-frontend] exporting to image
+#18 exporting layers
+#18 exporting layers 15.3s done
+#18 writing image sha256:bb7e5b39cd3c3b2830d0e1fc561d7de069f98a124d61fac3ab5bc55648055807 done
+#18 naming to docker.io/library/aeonanalytic-frontend done
+#18 DONE 19.1s

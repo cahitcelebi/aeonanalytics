@@ -1,0 +1,52 @@
+{
+  "name": "aeon-analytic-backend",
+  "version": "1.0.0",
+  "description": "Backend for AeonAnalytic",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "nodemon --watch src --ext ts,js --exec ts-node src/index.ts",
+    "build": "rm -rf dist && tsc",
+    "test": "jest",
+    "setup-db": "ts-node src/scripts/createDatabase.ts"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.7.0",
+    "@google/genai": "^1.0.0",
+    "@google/generative-ai": "^0.21.0",
+    "@mui/material": "^7.0.2",
+    "@types/bcrypt": "^5.0.2",
+    "@types/uuid": "^10.0.0",
+    "axios": "^1.9.0",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-rate-limit": "^6.7.0",
+    "jsonwebtoken": "^9.0.0",
+    "morgan": "^1.10.0",
+    "pg": "^8.11.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^6.30.0",
+    "sequelize": "^6.35.1",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/jest": "^29.5.0",
+    "@types/jsonwebtoken": "^9.0.1",
+    "@types/morgan": "^1.9.4",
+    "@types/node": "^18.19.96",
+    "@types/pg": "^8.10.9",
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.22",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "game": {
+    "id": 2,
+    "name": "Second Game",
+    "description": "Another test game"
+  },
+  "summary": {
+    "dau": 2,
+    "wau": 5,
+    "mau": 6,
+    "newUsers": 6,
+    "newUsersToday": 0,
+    "totalRevenue": 27.97,
+    "arpu": 13.98,
+    "arppu": 9.323333333333334,
+    "conversionRate": 100,
+    "avgSessionDuration": 3240,
+    "avgSessionPerUser": 1.6666666666666667,
+    "retention": {
+      "day1": 30,
+      "day7": 10,
+      "day30": 10
+    }
+  },
+  "trends": {
+    "dau": [
+      {
+        "date": "2024-05-01T00:00:00.000Z",
+        "value": 2
+      },
+      {
+        "date": "2024-05-02T00:00:00.000Z",
+        "value": 1
+      },
+      {
+        "date": "2024-05-05T00:00:00.000Z",
+        "value": 1
+      },
+      {
+        "date": "2024-05-06T00:00:00.000Z",
+        "value": 1
+      }
+    ],
+    "revenue": [
+      {
+        "date": "2024-05-05T00:00:00.000Z",
+        "value": 19.99
+      },
+      {
+        "date": "2024-05-06T00:00:00.000Z",
+        "value": 7.98
+      }
+    ],
+    "retention": [
+      {
+        "cohort": "2024-05-01T00:00:00.000Z",
+        "day1": 50,
+        "day7": 0,
+        "day30": 0
+      },
+      {
+        "cohort": "2024-05-05T00:00:00.000Z",
+        "day1": 100,
+        "day7": 0,
+        "day30": 0
+      },
+      {
+        "cohort": "2024-05-10T00:00:00.000Z",
+        "day1": 100,
+        "day7": 100,
+        "day30": 0
+      },
+      {
+        "cohort": "2024-05-31T00:00:00.000Z",
+        "day1": 0,
+        "day7": 0,
+        "day30": 0
+      },
+      {
+        "cohort": "2025-03-31T00:00:00.000Z",
+        "day1": 0,
+        "day7": 0,
+        "day30": 100
+      },
+      {
+        "cohort": "2025-04-05T00:00:00.000Z",
+        "day1": 0,
+        "day7": 0,
+        "day30": 0
+      },
+      {
+        "cohort": "2025-04-10T00:00:00.000Z",
+        "day1": 0,
+        "day7": 0,
+        "day30": 0
+      },
+      {
+        "cohort": "2025-04-15T00:00:00.000Z",
+        "day1": 0,
+        "day7": 0,
+        "day30": 0
+      },
+      {
+        "cohort": "2025-04-20T00:00:00.000Z",
+        "day1": 0,
+        "day7": 0,
+        "day30": 0
+      }
+    ],
+    "revenueByProduct": [
+      {
+        "product": "premium_pack",
+        "value": 19.99
+      },
+      {
+        "product": "coins_100",
+        "value": 4.99
+      },
+      {
+        "product": "gems_50",
+        "value": 2.99
+      }
+    ],
+    "revenueByPlatform": [
+      {
+        "platform": "app_store",
+        "value": 27.97
+      }
+    ],
+    "sessionByHour": [
+      {
+        "hour": "10",
+        "value": 2
+      },
+      {
+        "hour": "12",
+        "value": 2
+      },
+      {
+        "hour": "14",
+        "value": 1
+      }
+    ],
+    "topEvents": [
+      {
+        "event": "game_start",
+        "value": 3
+      },
+      {
+        "event": "level_complete",
+        "value": 2
+      }
+    ]
+  }
+}

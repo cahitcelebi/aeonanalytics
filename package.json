@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "@unocss/reset": "^66.1.0-beta.12",
+    "@unocss/webpack": "^66.1.0-beta.12",
+    "typescript": "^5.8.3",
+    "unocss": "^66.1.0-beta.12"
+  },
+  "dependencies": {
+    "@google/genai": "^1.0.0",
+    "undici": "^6.21.3"
+  }
+}

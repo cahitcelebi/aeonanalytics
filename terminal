@@ -1,0 +1,120 @@
+mkdir OpenGameAnalytics
+cd OpenGameAnalytics
+mkdir client-sdk
+mkdir backend
+mkdir dashboard
+cd backend
+
+# node_modules klasörünü sil
+rm -rf node_modules
+
+# package-lock.json'ı sil
+rm package-lock.json
+
+# Bağımlılıkları yeniden yükle
+npm install express dotenv cors pg pg-hstore sequelize bcrypt jsonwebtoken cookie-parser
+
+# Yüklenen modülleri kontrol et
+npm list | grep sequelize
+
+# Uygulamayı başlat
+npm start
+
+# MongoDB servisini başlat
+sudo service mongod start  # Linux için
+brew services start mongodb-community  # Mac için
+
+# MongoDB'nin çalışıp çalışmadığını kontrol et
+mongo --eval "db.version()"  # Eğer bir versiyon numarası görüyorsanız MongoDB çalışıyor demektir
+
+# Yeni bir terminal penceresinde
+curl http://localhost:3000/api/test
+
+# MongoDB servisinin durumunu kontrol et
+brew services list | grep mongodb
+
+# MongoDB'yi başlat
+brew services start mongodb-community
+
+# MongoDB log dosyasını kontrol et
+cat /usr/local/var/log/mongodb/mongo.log
+
+# Durumunu kontrol et
+brew services list | grep mongodb
+
+# MongoDB'nin yüklü olup olmadığını kontrol et
+brew list | grep mongodb
+
+# MongoDB'nin versiyonunu kontrol et
+mongod --version
+
+# MongoDB'yi yükle
+brew tap mongodb/brew
+brew install mongodb-community
+
+# MongoDB veri dizinini oluştur (eğer yoksa)
+sudo mkdir -p /usr/local/var/mongodb
+sudo chown -R $(whoami) /usr/local/var/mongodb
+
+# MongoDB log dizinini oluştur (eğer yoksa)
+sudo mkdir -p /usr/local/var/log/mongodb
+sudo chown -R $(whoami) /usr/local/var/log/mongodb
+
+# PostgreSQL servisinin çalıştığından emin olalım
+brew services list | grep postgresql
+
+# Eğer çalışmıyorsa başlatalım
+brew services start postgresql@14
+
+# Veritabanını oluşturalım
+psql postgres -c "CREATE DATABASE gameanalytics;"
+
+# PostgreSQL'e psql ile bağlan
+psql postgres
+
+# Veya bu şekilde de bağlanabilirsiniz
+psql -U postgres
+
+# Veritabanını oluştur
+CREATE DATABASE gameanalytics;
+
+# Veritabanına bağlan
+\c gameanalytics
+
+# PostgreSQL servisini yeniden başlatalım
+brew services restart postgresql@14
+
+# PostgreSQL config dosyasının yerini bul
+psql -U postgres -c 'SHOW config_file;'
+
+# pg_hba.conf dosyasını düzenle (yukarıdaki komutun çıktısındaki dizinde olacak)
+sudo nano /usr/local/var/postgresql@14/pg_hba.conf
+
+# PostgreSQL servisinin durumunu kontrol et
+brew services list | grep postgresql
+
+# PostgreSQL'i başlat
+brew services start postgresql@14
+
+# Tabloları oluştur
+npm run setup-db
+
+# Mevcut tabloları sil
+DROP DATABASE IF EXISTS gameanalytics;
+
+# Veritabanını yeniden oluştur
+CREATE DATABASE gameanalytics;
+
+# Veritabanına bağlan
+\c gameanalytics
+
+# SQL dosyasını çalıştır
+\i backend/sql/create_tables.sql
+
+# PostgreSQL Veritabanı İyileştirmeleri
+
+# 1. Users tablosunda last_seen_at güncellenmesi
+# 2. Devices tablosuna country sütunu eklenmesi
+
+# 1. Users tablosunda last_seen_at güncellenmesi
+npm run update-schema
