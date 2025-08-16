@@ -43,10 +43,7 @@ app.use('/api', chatRoutes);
 sequelize.authenticate()
   .then(() => {
     console.log('Database connection has been established successfully.');
-    return sequelize.sync();
-  })
-  .then(() => {
-    console.log('Database models synchronized.');
+    console.log('Database models loaded (sync disabled for data safety).');
     app.listen(PORT, () => {
       console.log(`Server is running on port ${PORT}`);
     });
