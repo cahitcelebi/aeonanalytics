@@ -31,7 +31,7 @@ app.use(morgan('dev'));
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/metrics/dashboard', dashboardRoutes);
-app.use('/games', gamesRoutes);
+app.use('/api/games', gamesRoutes);
 app.use('/api/metrics', metricsRouter);
 app.use('/api/events', eventsRouter);
 app.use('/api/sessions', sessionsRouter);
