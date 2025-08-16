@@ -10,7 +10,7 @@ Database synced successfully
 Server is running on port 3000
 API URL: http://localhost:3000/api
 Development mode: ENABLED
-2025-03-17T07:38:25.201Z - GET /api/games/key-info
+2025-03-17T07:38:25.201Z - GET /games/key-info
 Headers: {
   "host": "localhost:3000",
   "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
@@ -29,7 +29,7 @@ Received request headers: {
 }
 Validating API key: 3ffebb...
 Querying database for API key: 3ffebb...
-2025-03-17T07:38:25.218Z - GET /api/games/key-info
+2025-03-17T07:38:25.218Z - GET /games/key-info
 Headers: {
   "host": "localhost:3000",
   "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
@@ -303,7 +303,7 @@ Session başarıyla sonlandırıldı, ID: c0ffe7f9-24bb-4963-9c84-147e941faa6e
 Session end event oluşturuluyor: {"event_id":"155312f2-450d-44d2-b844-5eac6e51b244","session_id":"c0ffe7f9-24bb-4963-9c84-147e941faa6e","user_id":"3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2","event_name":"session_end","event_type":"System","timestamp":"2025-03-17T04:38:30.366Z","parameters":{"session_duration":5.19},"game_id":"aeon1"}
 Session end event başarıyla kaydedildi, ID: 155312f2-450d-44d2-b844-5eac6e51b244
 Kullanıcı istatistik güncelleme hatası (önemli değil): invalid input syntax for type integer: "5.19"
-2025-03-17T07:38:50.314Z - GET /api/games/key-info
+2025-03-17T07:38:50.314Z - GET /games/key-info
 Headers: {
   "host": "localhost:3000",
   "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
@@ -322,7 +322,7 @@ Received request headers: {
 }
 Validating API key: 3ffebb...
 Querying database for API key: 3ffebb...
-2025-03-17T07:38:50.329Z - GET /api/games/key-info
+2025-03-17T07:38:50.329Z - GET /games/key-info
 Headers: {
   "host": "localhost:3000",
   "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
@@ -594,7 +594,7 @@ Session başarıyla sonlandırıldı, ID: 504f5a8e-fefd-40bc-acb2-1e2564a352ac
 Session end event oluşturuluyor: {"event_id":"5d7389f5-7d86-4253-bc72-4ec2696312a4","session_id":"504f5a8e-fefd-40bc-acb2-1e2564a352ac","user_id":"3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2","event_name":"session_end","event_type":"System","timestamp":"2025-03-17T04:38:55.817Z","parameters":{"session_duration":5.51},"game_id":"aeon1"}
 Session end event başarıyla kaydedildi, ID: 5d7389f5-7d86-4253-bc72-4ec2696312a4
 Kullanıcı istatistik güncelleme hatası (önemli değil): invalid input syntax for type integer: "5.51"
-2025-03-17T07:39:18.835Z - GET /api/games/key-info
+2025-03-17T07:39:18.835Z - GET /games/key-info
 Headers: {
   "host": "localhost:3000",
   "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
@@ -613,7 +613,7 @@ Received request headers: {
 }
 Validating API key: 3ffebb...
 Querying database for API key: 3ffebb...
-2025-03-17T07:39:18.840Z - GET /api/games/key-info
+2025-03-17T07:39:18.840Z - GET /games/key-info
 Headers: {
   "host": "localhost:3000",
   "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
@@ -885,7 +885,7 @@ Session başarıyla sonlandırıldı, ID: f4f99391-45c8-4d22-a423-abf98abd9616
 Session end event oluşturuluyor: {"event_id":"fa511e21-979c-4928-bd06-6b6ed7d52878","session_id":"f4f99391-45c8-4d22-a423-abf98abd9616","user_id":"3CFB4D7E-C9CF-5533-84E6-4E0CECA9E7F2","event_name":"session_end","event_type":"System","timestamp":"2025-03-17T04:39:21.433Z","parameters":{"session_duration":2.6},"game_id":"aeon1"}
 Session end event başarıyla kaydedildi, ID: fa511e21-979c-4928-bd06-6b6ed7d52878
 Kullanıcı istatistik güncelleme hatası (önemli değil): invalid input syntax for type integer: "2.6"
-2025-03-17T07:39:51.303Z - GET /api/games/key-info
+2025-03-17T07:39:51.303Z - GET /games/key-info
 Headers: {
   "host": "localhost:3000",
   "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",
@@ -904,7 +904,7 @@ Received request headers: {
 }
 Validating API key: 3ffebb...
 Querying database for API key: 3ffebb...
-2025-03-17T07:39:51.311Z - GET /api/games/key-info
+2025-03-17T07:39:51.311Z - GET /games/key-info
 Headers: {
   "host": "localhost:3000",
   "user-agent": "UnityPlayer/2022.3.51f1 (UnityWebRequest/1.0, libcurl/8.5.0-DEV)",

@@ -69,7 +69,7 @@ export default function DashboardLayout({
     const fetchGameInfo = async () => {
       try {
         const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
-        const res = await fetch(`${apiUrl}/api/games/${gameId}`, {
+        const res = await fetch(`${apiUrl}/games/${gameId}`, {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         if (!res.ok) return;

@@ -55,13 +55,13 @@ api.interceptors.response.use(
 
 // Games API
 export const gamesApi = {
-  getAll: () => api.get('/api/games'),
-  getById: (id: string) => api.get(`/api/games/${id}`),
-  create: (data: any) => api.post('/api/games', data),
-  update: (id: string, data: any) => api.put(`/api/games/${id}`, data),
-  delete: (id: string) => api.delete(`/api/games/${id}`),
-  refreshApiKey: (id: string) => api.post(`/api/games/${id}/refresh-api-key`),
-  getMetrics: (id: string, params?: any) => api.get(`/api/games/${id}/metrics`, { params }),
+  getAll: () => api.get('/games'),
+  getById: (id: string) => api.get(`/games/${id}`),
+  create: (data: any) => api.post('/games', data),
+  update: (id: string, data: any) => api.put(`/games/${id}`, data),
+  delete: (id: string) => api.delete(`/games/${id}`),
+  refreshApiKey: (id: string) => api.post(`/games/${id}/refresh-api-key`),
+  getMetrics: (id: string, params?: any) => api.get(`/games/${id}/metrics`, { params }),
 };
 
 // Events API

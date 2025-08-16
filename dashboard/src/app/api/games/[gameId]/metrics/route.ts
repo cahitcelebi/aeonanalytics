@@ -42,7 +42,7 @@ export async function GET(
   { params }: { params: { gameId: string } }
 ) {
   try {
-    console.log('GET /api/games/[gameId]/metrics - Request received')
+    console.log('GET /games/[gameId]/metrics - Request received')
     const user = validateToken(request)
     
     if (!user) {
@@ -57,7 +57,7 @@ export async function GET(
     const endDate = searchParams.get('endDate')
     const metricType = searchParams.get('type')
 
-    const response = await api.get(`/api/games/${params.gameId}/metrics`, {
+    const response = await api.get(`/games/${params.gameId}/metrics`, {
       params: {
         startDate,
         endDate,
@@ -83,7 +83,7 @@ export async function POST(
   { params }: { params: { gameId: string } }
 ) {
   try {
-    console.log('POST /api/games/[gameId]/metrics - Request received')
+    console.log('POST /games/[gameId]/metrics - Request received')
     const user = validateToken(request)
     
     if (!user) {
@@ -94,7 +94,7 @@ export async function POST(
     }
 
     const body = await request.json()
-    const response = await api.post(`/api/games/${params.gameId}/metrics`, body, {
+    const response = await api.post(`/games/${params.gameId}/metrics`, body, {
       headers: {
         Authorization: `Bearer ${request.headers.get('authorization')?.split(' ')[1]}`
       }

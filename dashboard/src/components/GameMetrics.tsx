@@ -29,7 +29,7 @@ export default function GameMetrics({ onGameSelect, selectedGame }: GameMetricsP
   useEffect(() => {
     const fetchGames = async () => {
       try {
-        const response = await axios.get('/api/games')
+        const response = await axios.get('/games')
         setGames(response.data)
         if (response.data.length > 0 && !selectedGame) {
           onGameSelect(response.data[0].id)

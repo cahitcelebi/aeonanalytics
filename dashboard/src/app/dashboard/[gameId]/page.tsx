@@ -97,7 +97,7 @@ export default function GameDashboard() {
     try {
       const token = localStorage.getItem('token');
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
-      const response = await fetch(`${apiUrl}/api/games/${gameId}`, {
+      const response = await fetch(`${apiUrl}/games/${gameId}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -169,7 +169,7 @@ export default function GameDashboard() {
       const endDate = format(dateRange.end, 'yyyy-MM-dd');
       
       const response = await fetch(
-        `${apiUrl}/api/games/${gameId}/metrics?startDate=${startDate}&endDate=${endDate}`,
+        `${apiUrl}/games/${gameId}/metrics?startDate=${startDate}&endDate=${endDate}`,
         {
           headers: {
             'Authorization': `Bearer ${token}`

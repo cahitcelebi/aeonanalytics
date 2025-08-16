@@ -42,7 +42,7 @@ export async function POST(
   { params }: { params: { gameId: string } }
 ) {
   try {
-    console.log('POST /api/games/[gameId]/refresh-api-key - Request received')
+    console.log('POST /games/[gameId]/refresh-api-key - Request received')
     const user = validateToken(request)
     
     if (!user) {
@@ -52,7 +52,7 @@ export async function POST(
       )
     }
 
-    const response = await api.post(`/api/games/${params.gameId}/refresh-api-key`, {}, {
+    const response = await api.post(`/games/${params.gameId}/refresh-api-key`, {}, {
       headers: {
         Authorization: `Bearer ${request.headers.get('authorization')?.split(' ')[1]}`
       }

@@ -43,7 +43,7 @@ const validateToken = (req: Request) => {
 
 export async function GET(request: Request) {
   try {
-    console.log('GET /api/games - Request received')
+    console.log('GET /games - Request received')
     const user = validateToken(request)
     
     if (!user) {
@@ -71,7 +71,7 @@ export async function GET(request: Request) {
 
 export async function POST(request: Request) {
   try {
-    console.log('POST /api/games - Request received')
+    console.log('POST /games - Request received')
     const user = validateToken(request)
     
     if (!user) {

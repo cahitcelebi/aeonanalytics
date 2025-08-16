@@ -42,7 +42,7 @@ export async function GET(
   { params }: { params: { gameId: string } }
 ) {
   try {
-    console.log('GET /api/games/[gameId] - Request received')
+    console.log('GET /games/[gameId] - Request received')
     const user = validateToken(request)
     
     if (!user) {
@@ -52,7 +52,7 @@ export async function GET(
       )
     }
 
-    const response = await api.get(`/api/games/${params.gameId}`, {
+    const response = await api.get(`/games/${params.gameId}`, {
       headers: {
         Authorization: `Bearer ${request.headers.get('authorization')?.split(' ')[1]}`
       }
@@ -73,7 +73,7 @@ export async function PUT(
   { params }: { params: { gameId: string } }
 ) {
   try {
-    console.log('PUT /api/games/[gameId] - Request received')
+    console.log('PUT /games/[gameId] - Request received')
     const user = validateToken(request)
     
     if (!user) {
@@ -84,7 +84,7 @@ export async function PUT(
     }
 
     const body = await request.json()
-    const response = await api.put(`/api/games/${params.gameId}`, body, {
+    const response = await api.put(`/games/${params.gameId}`, body, {
       headers: {
         Authorization: `Bearer ${request.headers.get('authorization')?.split(' ')[1]}`
       }
@@ -105,7 +105,7 @@ export async function DELETE(
   { params }: { params: { gameId: string } }
 ) {
   try {
-    console.log('DELETE /api/games/[gameId] - Request received')
+    console.log('DELETE /games/[gameId] - Request received')
     const user = validateToken(request)
     
     if (!user) {
@@ -115,7 +115,7 @@ export async function DELETE(
       )
     }
 
-    const response = await api.delete(`/api/games/${params.gameId}`, {
+    const response = await api.delete(`/games/${params.gameId}`, {
       headers: {
         Authorization: `Bearer ${request.headers.get('authorization')?.split(' ')[1]}`
       }

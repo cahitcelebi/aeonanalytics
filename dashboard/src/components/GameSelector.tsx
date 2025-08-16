@@ -38,7 +38,7 @@ export const GameSelector = ({ selectedGame, onGameSelect, className }: GameSele
         throw new Error('Oturum bilgisi bulunamadı. Lütfen yeniden giriş yapın.')
       }
 
-      const response = await axios.get('/api/games', {
+      const response = await axios.get('/games', {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -50,7 +50,7 @@ export const GameSelector = ({ selectedGame, onGameSelect, className }: GameSele
           onGameSelect(response.data[0].id)
         }
       } else {
-        console.error('Invalid data format received from /api/games:', response.data)
+        console.error('Invalid data format received from /games:', response.data)
         setError('Oyunlar yüklenirken geçersiz veri formatı alındı.')
         setGames([])
       }

@@ -32,7 +32,7 @@ const testEndpoint = async (token, description) => {
   console.log('Token:', token);
   
   try {
-    const response = await axios.get('http://localhost:3001/api/games', {
+    const response = await axios.get('http://localhost:3001/games', {
       headers: {
         'Authorization': `Bearer ${token}`
       }

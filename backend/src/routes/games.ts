@@ -262,7 +262,7 @@ router.get('/:id/metrics', async (req, res) => {
   }
 });
 
-// Oyun detayını getir (GET /api/games/:id)
+// Oyun detayını getir (GET /games/:id)
 router.get('/:id', async (req, res) => {
   try {
     const developerId = req.user.developerId;

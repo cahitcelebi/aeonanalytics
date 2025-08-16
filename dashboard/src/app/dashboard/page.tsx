@@ -51,7 +51,7 @@ export default function Dashboard() {
       try {
         const token = localStorage.getItem("token");
         const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
-        const res = await fetch(`${apiUrl}/api/games`, {
+        const res = await fetch(`${apiUrl}/games`, {
           headers: { "Authorization": `Bearer ${token}` }
         });
         const data = await res.json();
@@ -86,7 +86,7 @@ export default function Dashboard() {
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
       const platformToSend = newGamePlatform === 'Other' ? customPlatform : newGamePlatform;
       console.log('Adding game with platform:', platformToSend);
-      const res = await fetch(`${apiUrl}/api/games`, {
+      const res = await fetch(`${apiUrl}/games`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -119,7 +119,7 @@ export default function Dashboard() {
     try {
       const token = localStorage.getItem("token");
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
-      const res = await fetch(`${apiUrl}/api/games/${editId}`, {
+      const res = await fetch(`${apiUrl}/games/${editId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -146,7 +146,7 @@ export default function Dashboard() {
     try {
       const token = localStorage.getItem("token");
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
-      const res = await fetch(`${apiUrl}/api/games/${id}`, {
+      const res = await fetch(`${apiUrl}/games/${id}`, {
         method: "DELETE",
         headers: { "Authorization": `Bearer ${token}` }
       });

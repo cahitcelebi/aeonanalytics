@@ -66,7 +66,7 @@ app.use('/api/auth', authRoutes);
 const eventRoutes = require('./routes/events');
 app.use('/api/events', eventRoutes);
 const gameRoutes = require('./routes/games');
-app.use('/api/games', gameRoutes);
+app.use('/games', gameRoutes);
 const metricsRoutes = require('./routes/metrics');
 app.use('/api/metrics', metricsRoutes);
 
