@@ -59,6 +59,9 @@ services:
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_AUTO_CREATE_TOPICS_ENABLE: 'true'
+    volumes:
+      - kafka_data:/var/lib/kafka/data
+    restart: unless-stopped
     networks:
       - aeon-network
 
@@ -108,4 +111,7 @@ networks:
 
 volumes:
   postgres_data:
-  redis_data: 
+  redis_data:
+  kafka_data:
+  zookeeper_data:
+  zookeeper_logs:
